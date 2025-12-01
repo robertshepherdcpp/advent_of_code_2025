@@ -27,8 +27,8 @@ auto main() -> int {
         //     }
         // }
         if (s[0] == 'L') {
-            int count = ((index-integer)*-1 - (index+integer)%100) / 100;
-            zero_count += count;
+            // int count = ((index-integer)*-1 - (index+integer)%100) / 100;
+            // zero_count += count;
             index = (index - integer) % 100;
             if (index < 0) index += 100;
         } else { // R
@@ -37,8 +37,8 @@ auto main() -> int {
                 index = (index + integer);
             }
             else {
-                int count = ((index+integer) - (index+integer)%100) / 100;
-                zero_count += count;
+                // int count = ((index+integer) - (index+integer)%100) / 100;
+                // zero_count += count;
 
                 index = (index + integer) % 100;
             }
