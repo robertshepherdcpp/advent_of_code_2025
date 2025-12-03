@@ -1,3 +1,5 @@
+// https://godbolt.org/z/bdYoj81bK
+
 #include<print>
 #include<vector>
 #include<string>
