@@ -27,7 +27,7 @@ auto main() -> int {
                          ((i < v.size()-1 and j < v[0].size()-1) ? (v[i+1][j+1] == '@') : 0) + 
                          ((i < v.size()-1 and j > 0) ? (v[i+1][j-1] == '@') : 0) + 
                          ((i > 0 and j > 0) ? (v[i-1][j-1] == '@') : 0) + 
-                         ((i > 0 and j < v.size()-1) ? (v[i-1][j+1] == '@') : 0);
+                         ((i > 0 and j < v[0].size()-1) ? (v[i-1][j+1] == '@') : 0);
             if(count < 4) {
                 total += 1;
             }
