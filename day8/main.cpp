@@ -12,6 +12,7 @@ Brute force:
 #include<vector>
 #include<string>
 #include<fstream>
+#include<cmath>
 
 template<typename A, typename B, typename C>
 struct triple {
@@ -51,4 +52,19 @@ auto main() -> auto {
         coordinates.emplace_back(n_vec);
     }
     // now we have the inputs.
+    std::vector<std::pair<triple<int, int, int>, triple<int, int, int>>> already_seen{};
+    for(int x = 0; x < 1000; x++) {
+        std::pair<triple<int, int, int>, triple<int, int, int>> shortest_p;
+        double shortest_v{};
+        for(int i = 0; i < coordinates.size(); i++) {
+            for(int j = i+1; j < coordinates.size()-1; j++) {
+                double distance = sqrt(pow(abs(coordinates[i].a - coordinates[j].a), 2) + pow(abs(coordinates[i].b - coordinates[j].b), 2) + pow(abs(coordinates[i].c - coordinates[j].c), 2));
+                if(distance < shortest_v and {coordinates[i], coordinates[j]} not in already_seen) {
+                    shortest_v = distance;
+                    shortest_p = {coordinates[i], coordinates[j]};
+                }
+            }
+        }
+        already_seen.push_back(shortest_p);
+    }
 }
