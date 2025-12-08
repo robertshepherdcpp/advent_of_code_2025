@@ -30,7 +30,8 @@ auto main() -> int {
     std::queue<std::pair<int, int>> q{};
     int splits = 0;
     while(true) {
-        std::pair<int, int> val = q.pop();
+        std::pair<int, int> val = q.front();
+        q.pop();
         if(val.first == vec.size()-1) {
             break;
         }
