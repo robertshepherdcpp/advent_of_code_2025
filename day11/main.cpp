@@ -153,6 +153,5 @@ int main() {
 
     std::cout << paths_count << "\n";
 
-
     return {};
 }
